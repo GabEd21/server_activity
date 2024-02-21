@@ -11,9 +11,14 @@ const server = http.createServer((req, res) => {
         myurl += 'main.html'
     }else if(req.url == '/about'){
         myurl += 'about.html'
+    }else if(req.url == '/profile'){
+        myurl += 'profile.html'
+    }else if (req.url == '/portfolio') {
+        myurl += 'portfolio.html'
+    }else if (req.url == '/uniquepage') {
+        myurl += 'uniquepage.html'
     }else{
         myurl += 'error.html'
-        res.statusCode = 404
     }
     fs.readFile(myurl, (err, data) => {
         if(err){
